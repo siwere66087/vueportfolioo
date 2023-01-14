@@ -60,23 +60,23 @@ data() {
   },
   {
   title:'ecommerce',
-  image:'',
-  description:"netflix clone",
-  github:'',
-  netlify:''
+  image:'https://i.postimg.cc/L5bF8586/jacket-32714-1280.png',
+  description:"jacket store",
+  github:'https://github.com/siwere66087/ecommerse.git',
+  netlify:'jacketzz.netlify.app'
 
   },
   {
-  title:'portfolio',
+  title:' js portfolio',
   image:'https://i.postimg.cc/jSJccHYP/IMG-20221019-WA0017.jpg',
-  description:"netflix clone",
-  github:'',
-  netlify:''
+  description:portfolio",
+  github:'https://github.com/siwere66087/submit-pos.git',
+  netlifyhttps://curious-creponne-176988.netlify.app
 
   },
   {
   title:'bs portfolio',
-  image:'',
+  image:'https://i.postimg.cc/jSJccHYP/IMG-20221019-WA0017.jpg',
   description:"personal bs portfolio",
   github:'https://github.com/siwere66087/bs-portfolio.git',
   netlify:''
