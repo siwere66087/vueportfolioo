@@ -42,35 +42,30 @@ export default {
       project1: [{
         image: 'https://i.postimg.cc/G272k9P4/C11-Nontobeko-Mhlongo-1.jpg',
         projectName: 'Nontobeko Mhlongo',
-        description: ' siwe is great person with great personality. she is easy to talk too and rely on.',
-        gitHub: 'https://github.com/Ntobe99/Nonto-vue-portfolio',
-      
+        description: ' siwe is great person with great personality. she is easy to talk too.she loves coding and always willing to help others before her.',
+       
         
       }],
       project: [{
         image: 'https://i.postimg.cc/HkyBRyVC/Gift-Mahlangu.jpg',
         projectName: 'Gift Mahlangu',
-        description: '',
+        description: 'siwe is good person.she loves coding and passionate about it. ',
       
       },
       {
         image: 'https://ca.slack-edge.com/T02LW4RMXJQ-U0444AHR59B-a9d9ad76f500-512',
         projectName: 'Sibabalwe',
-        description: 'Some people are naturally outgoing, conversational and quickly find ways to feel at home in groups of strangers ',
+        description: 'siwe is a great person, easy to talk. she is hard worker.',
         
       },
       {
         image: 'https://i.postimg.cc/XN5PtmhP/C11-Nozipho-Mayila-2.jpg',
         projectName: 'Nozipho Mayila',
-        description: '',
+        description: 'siwe is a good person, she listens and helpful when you need help. ',
         
-      },
+      }
       
-      {
-        image: 'https://i.postimg.cc/Jzx6ZFzY/Lavish-Logo-Turquoise-Gold-an-Blue-Gradient.webp',
-        projectName: '',
-        description: 'Some people are naturally outgoing, conversational and quickly find ways to feel at home in groups of strangers. so i would say siwe is a people's person',
-       
+     
       ]
     }
   }
