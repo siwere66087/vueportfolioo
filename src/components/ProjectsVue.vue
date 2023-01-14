@@ -3,26 +3,23 @@
 
 <template>
 
- <div class="main-container" v-for="item in projects"  :key="item">
-  <div class="heading">
-   
-    <h2 class="title">projects</h2>
-  </div>
-  <img :src="item.image" class="img">
-  <div class="cards">
-    <div class="card card-1">
-     
-     <h2 class="">{{item.title}}</h2>
-      <h2 class="card__title">{{item.description}}</h2>
-      <p class="card__apply">
-        <a class="btn" href="item.github">github <i class="fas fa-arrow-right"></i></a>
-        <a class="btn" href="item.netlify">netlify <i class="fas fa-arrow-right"></i></a>
-      </p>
-    </div>
-    
-    
-  </div>
-</div>
+<div class="projects">
+        <div class="container" >
+              <div class="card"  v-for="item in projects">
+                <div class="card-body">
+                    <img :src="item.image"  class="card-img-top" alt="...">
+                  <h5 class="card-title bold">{{ item.name }}</h5>     
+                  <div class=" d-grid gap-2 col-6 mx-auto">
+                  <a class="btn btn-dark" :href="item.netlify" target="_blank_">netlify</a>
+                  <a  class="btn btn-dark" :href="item.github" target="_blank_">github</a>
+                </div>
+                  </div>
+                </div>
+             </div>
+     </div>
+
+
+
 
 
 </template>
@@ -100,86 +97,51 @@ data() {
 <style>
 
 
+.card{
+  width: 250px;height: 360px; 
+  margin: 10px;
 
-.main-container {
-  padding: 30px;
 }
 
-.heading {
-  text-align: center;
+.container{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center  !important;;
+    
+  }
+.projects{
+    padding-top: 125px;
+   
+    
+ 
 }
-
-.heading__title {
-  font-weight: 600;
+ @media only screen and (max-width:970px) {
+  .container{
+    margin-top: 30px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    
+  }
 }
-
-.heading__link {
-  text-decoration: none;
+@media only screen and (max-width: 580px) {
+  .container{
+    display: grid; 
+    grid-template-columns: 1fr;
+    
+  }
 }
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+img{
+  height: 12rem;
+  object-fit: cover;
 }
-
-.card {
-  margin: 20px;
-  padding: 20px;
-  width: 500px;
-  min-height: 200px;
-  display: grid;
-  grid-template-rows: 20px 50px 1fr 50px;
-  border-radius: 10px;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
-  transition: all 0.2s;
-}
-
-.card:hover {
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-  transform: scale(1.01);
-}
-
-
-
-
-.card__exit {
-  grid-row: 1/2;
-  justify-self: end;
-}
-
-.card__icon {
-  grid-row: 2/3;
-  font-size: 30px;
-}
-
-.card__title {
-  grid-row: 3/4;
-  font-weight: 400;
-  color: #ffffff;
-}
-
-.card__apply {
-  grid-row: 4/5;
-  align-self: center;
-}
-
-.card-1 {
-  background: radial-gradient(#1fe4f5, #3fbafe);
-}
-
-
-
-/* RESPONSIVE */
 
 @media (max-width: 1600px) {
-  .cards {
+  .card {
     justify-content: center;
   }
 }
 
-.btn .card__exit,
-.card__icon{
+.btn {
    display: inline-block;
    margin-top: 1rem;
    background-color: rgb(160, 60, 118);
