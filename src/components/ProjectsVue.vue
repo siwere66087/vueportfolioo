@@ -3,31 +3,28 @@
 
 <template>
 
-<section class="project" id="project" >
-
-<!-- item.heading -->
-<div class="heading">
-    <span>projects</span>
+ <div class="main-container" v-for="item in projects"  :key="item">
+  <div class="heading">
    
+    <h2 class="title">projects</h2>
+  </div>
+  <img :src="item.image" class="img">
+  <div class="cards">
+    <div class="card card-1">
+     
+     <h2 class="">{{item.title}}</h2>
+      <h2 class="card__title">{{item.description}}</h2>
+      <p class="card__apply">
+        <a class="btn" href="item.github">github <i class="fas fa-arrow-right"></i></a>
+        <a class="btn" href="item.netlify">netlify <i class="fas fa-arrow-right"></i></a>
+      </p>
+    </div>
+    
+    
+  </div>
 </div>
 
-<div class="box-container" v-for="item in projects"  :key="item">
 
-    <div class="box" data-aos="fade-up" data-aos-delay="150" >
-      <img :src="item.image" class="img">
-            
-        </div>
-        <div class="content">
-            <h3>{{item.title}}</h3>
-            <p>{{item.description}}</p>
-            <div class="iconCont">
-            <a href="item.github">github <i class="fas fa-angle-right"> </i></a>
-            <a href="item.netlify">netlify <i class="fas fa-angle-right"></i></a>
-          </div>
-          </div>
-    </div>
-    </section>
-  
 </template>
 
 
@@ -37,7 +34,7 @@ export default {
 data() {
    return {
    projects: [
-   {
+  {
   title:'netflix',
   image:'https://i.postimg.cc/VkQMbcTw/netflix.jpg',
   description:"netflix clone",
@@ -49,12 +46,28 @@ data() {
   title:'calculator',
   image:'https://i.postimg.cc/jSJccHYP/IMG-20221019-WA0017.jpg',
   description:"web calculator ",
+  github:'https://github.com/siwere66087/calculatorJs.git',
+  netlify:'https://siwecalculator.netlify.app'
+
+  },
+  {
+  title:'clothing store',
+  image:'https://i.postimg.cc/Z5N6z1VS/fashion-5320934-1920.jpg',
+  description:"",
+  github:'https://github.com/siwere66087/clothingstore.git',
+  netlify:''
+
+  },
+  {
+  title:'ecommerce',
+  image:'',
+  description:"netflix clone",
   github:'',
   netlify:''
 
   },
   {
-  title:'netflix',
+  title:'portfolio',
   image:'https://i.postimg.cc/jSJccHYP/IMG-20221019-WA0017.jpg',
   description:"netflix clone",
   github:'',
@@ -62,30 +75,13 @@ data() {
 
   },
   {
-  title:'netflix',
-  image:'https://i.postimg.cc/jSJccHYP/IMG-20221019-WA0017.jpg',
-  description:"netflix clone",
-  github:'',
-  netlify:''
-
-  },
-  {
-  title:'netflix',
-  image:'https://i.postimg.cc/jSJccHYP/IMG-20221019-WA0017.jpg',
-  description:"netflix clone",
-  github:'',
-  netlify:''
-
-  },
-  {
-  title:'netflix',
-  image:'https://i.postimg.cc/jSJccHYP/IMG-20221019-WA0017.jpg',
-  description:"netflix clone",
-  github:'',
+  title:'bs portfolio',
+  image:'',
+  description:"personal bs portfolio",
+  github:'https://github.com/siwere66087/bs-portfolio.git',
   netlify:''
 
   }
-
 ]
 
    }
@@ -105,131 +101,115 @@ data() {
 
 
 
-.project .box-container {
- 
- display: grid;
-grid-template-columns: repeat(3,1fr);
- /* -ms-grid-columns: (minmax(27rem, 1fr))[auto-fit]; */
- grid-template-columns: repeat(auto-fit, minmax(3, 1fr));
- gap: 1.5rem;
+.main-container {
+  padding: 30px;
 }
 
-.project .box-container .box {
- border-radius: 1rem;
- overflow: hidden;
- background: #222;
+.heading {
+  text-align: center;
 }
 
-.project .box-container .box:hover img {
- -webkit-transform: scale(1.1);
-         transform: scale(1.1);
+.heading__title {
+  font-weight: 600;
 }
 
-.project.box-container .box .image {
- height: 20rem;
- overflow: hidden;
- width: 100%;
+.heading__link {
+  text-decoration: none;
 }
 
-.project .box-container .box .image img {
- height: 100%;
- width: 100%;
- object-fit: cover;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.project .box-container .box .content {
- padding: 2rem;
- text-align: center;
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
 }
 
-.project .box-container .box .content h3 {
- font-size: 2rem;
- color: #fff;
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.01);
 }
 
-.project .box-container .box .content p {
- padding: 1rem 0;
- font-size: 1.4rem;
- color: #aaa;
- line-height: 2;
+
+
+
+.card__exit {
+  grid-row: 1/2;
+  justify-self: end;
 }
 
-.project .box-container .box .content a {
- font-size: 1.7rem;
- color: #29d9d5;
+.card__icon {
+  grid-row: 2/3;
+  font-size: 30px;
 }
 
-.project .box-container .box .content a:hover i {
- padding-left: 1rem;
+.card__title {
+  grid-row: 3/4;
+  font-weight: 400;
+  color: #ffffff;
 }
 
-.project .box-container .box .content a i {
- padding-right: .5rem;
+.card__apply {
+  grid-row: 4/5;
+  align-self: center;
 }
 
-.btn{
+.card-1 {
+  background: radial-gradient(#1fe4f5, #3fbafe);
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+  .cards {
+    justify-content: center;
+  }
+}
+
+.btn .card__exit,
+.card__icon{
    display: inline-block;
    margin-top: 1rem;
    background-color: rgb(160, 60, 118);
    cursor: pointer;
-   color:white;
    border: #29d9d5 3px solid;
    font-size: 1.8rem;
    padding:1rem 3rem;
-}
-
-.btn:hover{
-   background-color: black;
-}
-
-#project-btn{
-   display: none;
-   font-size: 2.5rem;
-   color:black;
-   cursor: pointer;
+     position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 
 
-
-/* media queries  */
-
-@media (max-width:991px){
-
-html{
-   font-size: 55%;
+.btn::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
 }
 
-}
+.btn:hover::after {
+  width: 100%;
 
-@media (max-width:768px){
-
-  #project{
-   display: inline-block;
-   transition: .2s linear;
-}
-
-#project.fa-times{
-   transform: rotate(180deg);
 }
 
 
-}
-
-@media (max-width:450px){
-
-html{
-   font-size: 50%;
-}
-
-img{
-   height: 3rem;
-}
-
- h3{
-   font-size: 3rem;
-}
-
-}
 </style>
 
