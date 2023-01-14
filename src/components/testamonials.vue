@@ -44,7 +44,7 @@ export default {
         projectName: 'Nontobeko Mhlongo',
         description: ' siwe is great person with great personality. she is easy to talk too and rely on.',
         gitHub: 'https://github.com/Ntobe99/Nonto-vue-portfolio',
-        facebook:''
+      
         
       }],
       project: [{
@@ -56,31 +56,21 @@ export default {
       {
         image: 'https://ca.slack-edge.com/T02LW4RMXJQ-U0444AHR59B-a9d9ad76f500-512',
         projectName: 'Sibabalwe',
-        description: ' ',
-        gitHub: 'https://github.com/17mkhmke/EOM-js',
-        netlify: 'https://astonishing-blini-69f53e.netlify.app/'
+        description: 'Some people are naturally outgoing, conversational and quickly find ways to feel at home in groups of strangers ',
+        
       },
       {
         image: 'https://i.postimg.cc/XN5PtmhP/C11-Nozipho-Mayila-2.jpg',
         projectName: 'Nozipho Mayila',
-        description: 'This is a personal portfolio consist of HTML5, Bootstrap5 and CSS3',
-        gitHub: 'https://github.com/17mkhmke/projectportfolio.git',
-        netlify: 'https://mkhuselimkeyiya-portfolio-project.netlify.app/'
+        description: '',
+        
       },
-      {
-        image: 'https://i.postimg.cc/ZnRjX1Np/Potential-profile-fococlipping-standard.png',
-        projectName: 'Portfolio VUE',
-        description: 'This is a personal portfolio with VUE JS',
-        gitHub: 'https://github.com/17mkhmke/vue_portfolio.git',
-        netlify: 'https://vueportfolio-40dbf.web.app'
-      },
+      
       {
         image: 'https://i.postimg.cc/Jzx6ZFzY/Lavish-Logo-Turquoise-Gold-an-Blue-Gradient.webp',
-        projectName: 'e-Commerce VUE',
-        description: 'This is a e-Commerce website with VUE JS',
-        gitHub: 'https://github.com/17mkhmke/vue_Exercise3.git',
-        netlify: 'https://e-commercevue.web.app'
-      }
+        projectName: '',
+        description: 'Some people are naturally outgoing, conversational and quickly find ways to feel at home in groups of strangers. so i would say siwe is a people's person',
+       
       ]
     }
   }
