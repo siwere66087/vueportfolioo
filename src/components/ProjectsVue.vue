@@ -3,13 +3,12 @@
 
 <template>
 
-<div class="projects">
+<div class="projects" >
         <div class="container" >
-              <div class="card"  v-for="item in projects">
+              <div class="card" style="width: 300px;height: 400px; margin: 10px;" v-for="item in projects">
                 <div class="card-body">
                     <img :src="item.image"  class="card-img-top" alt="...">
-                  <h5 class="card-title bold">{{ item.title }}</h5>  
-                  <p>{{item.description}}
+                  <h5 class="card-title bold">{{ item.name }}</h5>     
                   <div class=" d-grid gap-2 col-6 mx-auto">
                   <a class="btn btn-dark" :href="item.netlify" target="_blank_">netlify</a>
                   <a  class="btn btn-dark" :href="item.github" target="_blank_">github</a>
@@ -98,12 +97,6 @@ data() {
 <style>
 
 
-.card{
-  width: 250px;height: 360px; 
-  margin: 10px;
-
-}
-
 .container{
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr;
@@ -135,28 +128,6 @@ img{
   height: 12rem;
   object-fit: cover;
 }
-
-@media (max-width: 1600px) {
-  .card {
-    justify-content: center;
-  }
-}
-
-.btn {
-   display: inline-block;
-   margin-top: 1rem;
-   background-color: rgb(160, 60, 118);
-   cursor: pointer;
-   border: #29d9d5 3px solid;
-   font-size: 1.8rem;
-   padding:1rem 3rem;
-     position: relative;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-
-
 .btn::after {
   position: absolute;
   top: 25px;
@@ -170,9 +141,18 @@ img{
 
 .btn:hover::after {
   width: 100%;
-
 }
 
+
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1600px) {
+  .card {
+    justify-content: center;
+  }
+}
 
 </style>
 
