@@ -1,9 +1,9 @@
 <template>
 <h1></h1>
-    <div class="home_container" >
+    <div >
 
        
-    <personalDetails></personalDetails>
+  </personalDetails>
     </div>
 </template>
 
