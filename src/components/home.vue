@@ -141,10 +141,11 @@ img {
   transition:0.5s;
 }
 .container {
-width: 60rem;;
+width: 50%;;
  height: 60vh;
 display: block;
 margin-right: 90rem;
+border:2px solid red;
 
   
 }
