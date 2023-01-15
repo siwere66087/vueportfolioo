@@ -1,10 +1,9 @@
 <template>
-<h1></h1>
-    <div >
+
 
        
   </personalDetails>
-    </div>
+  
 </template>
 
 <script>
