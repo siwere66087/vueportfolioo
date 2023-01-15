@@ -8,7 +8,8 @@
               <div class="card"  v-for="item in projects">
                 <div class="card-body">
                     <img :src="item.image"  class="card-img-top" alt="...">
-                  <h5 class="card-title bold">{{ item.name }}</h5>     
+                  <h5 class="card-title bold">{{ item.title }}</h5>  
+                  <p>{{item.description}}
                   <div class=" d-grid gap-2 col-6 mx-auto">
                   <a class="btn btn-dark" :href="item.netlify" target="_blank_">netlify</a>
                   <a  class="btn btn-dark" :href="item.github" target="_blank_">github</a>
