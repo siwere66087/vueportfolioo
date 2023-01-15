@@ -7,7 +7,7 @@
 		<div class="contactForm" >
 	
 		   
-		<contact></contact>
+		</contact>
 		
 		</div>
 	</template>
