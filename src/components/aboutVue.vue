@@ -1,33 +1,28 @@
 <template>
-  <section id="about" class="section wb">
-        <div class="container">
-            <div class="row"  v-for="item in about" :key="item">
-                <div class="col-md-6">
-                    <div class="message-box">                        
-                        <h2 class="name">Sivuyisiwe Mgijima</h2>
-                        <p class="abtD"> {{ item.description }} </p>
-						       </div>
-                </div>
+   <div id="about" class="about">
+      <div class="container" v-for="item in about" :key="item">
+        <div class="row justify-content-between">
 
-                <div class="col-md-6">
-                    <div class="right-box-pro wow fadeIn">
-                      <img :src="item.image" class="img">
-                    </div>
-                </div>
-
-				<div id="social-icons">
-  <li><a href="" id="icons"><i class="  fa-brands fa-facebook"></i> </a></li>
-  <li><a href="" id="icons"><i class="fa-brands fa-twitter"></i> </a></li>
-  <li><a href="" id="icons"><i class="fa-brands fa-linkedin"></i> </a></li>
-  <li><a href="" id="icons"><i class="fa-brands fa-instagram"></i> </a></li>
- 
- </div>
-
-
-
+          <div class="col-lg-4 ">
+            <div class="div-img-bg">
+              <div class="about-img">
+                <img :src="item.image" class="img">
+              </div>
             </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="about-descr">
+
+              <p class="p-heading">{{ item.description }} </p>
+              
+</div>
+
+          </div>
         </div>
-  </section>
+      </div>
+    </div>
+     
 	
 </template>
 
@@ -49,33 +44,344 @@
 </script>
 
 <style scoped>
-.name{
-color: rgb(193, 33, 33);
-font-size: 23px;
+#about {
+  width: 100%;
+  height: auto;
+  background: #f7f7f7;
+  padding-top: 120px;
+  position: fixed;
+}
+
+#about .div-img-bg {
+  padding-bottom: 30px;
+  border: 20px solid #eb410d;
+}
+
+#about .div-img-bg .about-img img {
+  width: 100%;
+  box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+  margin-top: -60px;
+  margin-left: 40px;
+  height: 400px;
+  object-fit: cover;
+}
+
+#about .about-descr .p-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  text-align: left;
+}
+
+#about .about-descr  {
+  max-width: 80%;
+  margin-bottom: 0;
+  text-align: left;
+}
+.head-info .header-content  {
+    font-size: 32px;
+  }
+
+  #about .div-img-bg {
+    padding: 0;
+  }
+
+  #about .div-img-bg .about-img img {
+    margin-top: 0%;
+    margin-left: calc(0% - 0px);
+  }
+
+  #about .about-descr .p-heading {
+    font-size: 20px;
+  }
+
+  #about .about-descr  {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+
+
+/* media query */
+@media (max-width: 320px) {
+
+/* Navbar */
+nav {
+  padding: 20px 15px;
+}
+
+.nav-menu {
+  margin-top: 40px;
+  display: none;
+  float: none;
+  width: 100%;
+}
+
+.nav-menu li {
+  float: none;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #f7f7f7;
+  line-height: 45px;
+  margin-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.responsive {
+  float: right;
+  padding-top: 15px;
+  display: block;
+}
+
+/* About */
+.head-info .header-content h1 {
+  font-size: 32px;
+}
+
+#about .div-img-bg {
+  padding: 0;
+}
+
+#about .div-img-bg .about-img img {
+  margin-top: 0%;
+  margin-left: calc(0% - 0px);
+}
+
+#about .about-descr .p-heading {
+  font-size: 20px;
+}
+
+#about .about-descr  {
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+}
+/** Width between 480px to 0
+
+ */
+ @media (max-width: 480px) {
+
+/* Navbar */
+nav {
+  padding: 20px 15px;
+}
+
+.nav-menu {
+  margin-top: 40px;
+  display: none;
+  float: none;
+  width: 100%;
+}
+
+.nav-menu li {
+  float: none;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #f7f7f7;
+  line-height: 45px;
+  margin-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+
+/* About */
+.head-info .header-content h1 {
+  font-size: 32px;
+}
+
+#about .div-img-bg {
+  padding: 0;
+}
+
+#about .div-img-bg .about-img img {
+  margin-top: 0%;
+  margin-left: calc(0% - 0px);
+}
+
+#about .about-descr .p-heading {
+  font-size: 20px;
+}
+
+#about .about-descr  {
+  max-width: 100%;
+  margin-bottom: 0;
+}
 
 }
 
-.abtD{
-	color: white;
-}
-#social-icons{
-width: 550pxx;
-display: flex;
-padding-bottom: 20rem;
-border: 2px solid rgb(225, 111, 111);
-}
-#social-icons li{
-    list-style: none;
-}
-#social-icons li a{
-color: white;
-font-size: 30px;
-padding: 15px;
-margin-left: 60px;
-margin-top: 30px;
+/** Width between 600px to 0
+
+ */
+ @media (max-width: 600px) {
+
+/* Navbar */
+nav {
+  padding: 20px 15px;
 }
 
-#icons{
-border-radius: 50px;
+.nav-menu {
+  margin-top: 40px;
+  display: none;
+  float: none;
+  width: 100%;
 }
+
+.nav-menu li {
+  float: none;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #f7f7f7;
+  line-height: 45px;
+  margin-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.responsive {
+  float: right;
+  padding-top: 15px;
+  display: block;
+}
+
+/* About */
+.head-info .header-content h1 {
+  font-size: 32px;
+}
+
+#about .div-img-bg {
+  padding: 0;
+}
+
+#about .div-img-bg .about-img img {
+  margin-top: 0%;
+  margin-left: calc(0% - 0px);
+}
+
+#about .about-descr .p-heading {
+  font-size: 20px;
+}
+
+#about .about-descr {
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+}
+
+
+/** Width between 767px to 0
+ *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+ @media (max-width: 767px) {
+
+/* Navbar */
+nav {
+  padding: 20px 15px;
+}
+
+.nav-menu {
+  margin-top: 40px;
+  display: none;
+  float: none;
+  width: 100%;
+}
+
+.nav-menu li {
+  float: none;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #f7f7f7;
+  line-height: 45px;
+  margin-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.responsive {
+  float: right;
+  padding-top: 15px;
+  display: block;
+}
+
+/* About */
+.head-info .header-content h1 {
+  font-size: 32px;
+}
+
+#about .div-img-bg {
+  padding: 0;
+}
+
+#about .div-img-bg .about-img img {
+  margin-top: 0%;
+  margin-left: calc(0% - 0px);
+}
+
+#about .about-descr .p-heading {
+  font-size: 20px;
+}
+
+#about .about-descr{
+  max-width: 100%;
+  margin-bottom: 0;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+/* Navbar */
+nav {
+  padding: 10px 15px;
+}
+
+.nav-menu {
+  margin-top: 40px;
+  display: none;
+  float: none;
+  width: 100%;
+}
+
+.nav-menu li {
+  float: none;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #f7f7f7;
+  line-height: 45px;
+  margin-left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.responsive {
+  float: right;
+  padding-top: 15px;
+  display: block;
+}
+
+/* About */
+.head-info .header-content  {
+  font-size: 32px;
+}
+
+#about .div-img-bg {
+  padding: 0;
+}
+
+#about .div-img-bg .about-img img {
+  margin-top: 0%;
+  margin-left: calc(0% - 0px);
+}
+
+#about .about-descr .p-heading {
+  font-size: 20px;
+}
+
+#about .about-descr {
+  max-width: 100%;
+  margin-bottom: 0;
+}
+}
+
 </style>
