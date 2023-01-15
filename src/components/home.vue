@@ -156,6 +156,8 @@ border:2px solid red;
   transform:perspective(800px)  rotateY(0deg);
   opacity:1;
 }
+. class="card-body{
+border: 3px solid gray;
 
 
 /* right content */
