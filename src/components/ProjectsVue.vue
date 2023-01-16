@@ -66,9 +66,15 @@ data() {
   {
   title:' js portfolio',
   image:'https://i.postimg.cc/jSJccHYP/IMG-20221019-WA0017.jpg',
+<<<<<<< HEAD
   description:"portfolio",
   github:'https://github.com/siwere66087/submit-pos.git'
 
+=======
+  description:portfolio",
+  github:'https://github.com/siwere66087/submit-pos.git',
+  netlifyhttps://curious-creponne-176988.netlify.app
+>>>>>>> 6eccc562c4c3c571b3dfa77b1ec69aca2c3841fb
 
   },
   {
